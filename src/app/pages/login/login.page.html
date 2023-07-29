@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Log In</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button color="danger">
+      <ion-icon name="log-out-outline" (click)="Logout()"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <form style="width: 70%; padding:20px; margin: auto;" (ngSubmit)="login()" [formGroup]="credentials">
+    <div style="width: 70%; margin:auto; padding:20px;">
+      <img src="https://firebasestorage.googleapis.com/v0/b/khajornsakdev.appspot.com/o/Findfitt%20Image%2Fsvg%2Fundraw_login_re_4vu2.svg?alt=media&token=21417fd0-7844-4b2f-ad5d-c09e897b2a5a" alt="">
+    </div>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" required formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" required formControlName="password"></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="primary" expand="block">Sign In</ion-button>
+        <p class="ion-text-center">Not a Member?  <a [routerLink]="['/register']" class="small-text">Sign Up</a></p>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

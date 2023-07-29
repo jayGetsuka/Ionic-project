@@ -1,0 +1,27 @@
+.header-container {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: #353156;
+}
+.container {
+  height: 100vh;
+  background-color: #3C3963;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+.form {
+  width: 80%;
+  background-color: #172C5A;
+  padding: 30px;
+}
+.form-input {
+  background-color: #172C5A;
+}
+.form-item {
+  background-color: #172C5A;
+  padding: 10px;
+}
